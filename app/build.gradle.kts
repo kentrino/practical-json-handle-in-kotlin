@@ -8,6 +8,11 @@ plugins {
 }
 
 dependencies {
+    kotlinBom()
+    kotlinStdlibJdk()
+    coroutine()
+    ktor()
+    logging()
     implementation("org.apache.commons:commons-text:1.9")
     implementation(project(":utilities"))
 }

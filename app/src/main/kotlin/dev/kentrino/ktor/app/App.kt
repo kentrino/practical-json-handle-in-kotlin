@@ -3,12 +3,20 @@
  */
 package dev.kentrino.ktor.app
 
-import dev.kentrino.ktor.utilities.StringUtils
-
-import org.apache.commons.text.WordUtils
+import io.ktor.server.cio.*
+import io.ktor.server.engine.*
+import io.ktor.server.netty.*
 
 fun main() {
-    val tokens = StringUtils.split(MessageUtils.getMessage())
-    val result = StringUtils.join(tokens)
-    println(WordUtils.capitalize(result))
+    embeddedServer(
+            factory = Netty,
+            host = "0.0.0.0",
+            port = 3000,
+            configure = {
+                callGroupSize = 200
+            },
+            module =  {
+                this.configure()
+            }
+    ).applyGracefulShutdown(enable = true).start()
 }
