@@ -12,6 +12,7 @@ dependencies {
     kotlinStdlibJdk()
     coroutine()
     ktor()
+    jackson()
     logging()
     implementation("org.apache.commons:commons-text:1.9")
     implementation(project(":utilities"))
