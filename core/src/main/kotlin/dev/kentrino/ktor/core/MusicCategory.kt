@@ -4,11 +4,8 @@ import jp.justincase.jackson.kotlin.enumerated.Enumerated
 import jp.justincase.jackson.kotlin.enumerated.values
 import jp.justincase.jackson.kotlin.textual.Textual
 
-sealed class MusicCategory: StringConvertible {
+sealed class MusicCategory {
     abstract val japaneseName: String
-
-    override val string: String
-        get() = japaneseName
 
     object Rock : MusicCategory() {
         override val japaneseName = "ロック"
