@@ -1,6 +1,8 @@
 package dev.kentrino.ktor.app
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
+import dev.kentrino.ktor.core.Id
+import dev.kentrino.ktor.core.randomId
 import io.ktor.application.*
 import io.ktor.features.*
 import io.ktor.http.*
@@ -18,7 +20,7 @@ fun Application.configure() {
     routing {
         route("/") {
             get {
-                call.respond(HttpStatusCode.OK, IndexResponse(3))
+                call.respond(HttpStatusCode.OK, IndexResponse(3, userId = randomId()))
             }
         }
     }
