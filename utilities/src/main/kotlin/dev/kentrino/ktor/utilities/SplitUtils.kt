@@ -3,7 +3,7 @@
  */
 package dev.kentrino.ktor.utilities
 
-import dev.kentrino.ktor.list.LinkedList
+import dev.kentrino.ktor.core.LinkedList
 
 class SplitUtils {
     companion object {

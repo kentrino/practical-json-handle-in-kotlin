@@ -8,4 +8,4 @@
  */
 
 rootProject.name = "dev.kentrino.ktor"
-include("app", "list", "utilities")
+include("app", "core", "utilities")
