@@ -14,6 +14,7 @@ interface StringConvertible {
 }
 
 interface StringConvertibleDecoder<T : StringConvertible> : TextualDecoder<T> {
+    @Suppress("ImplicitNullableNothingType")
     override
-    fun fromNull() = throw NullPointerException()
+    fun fromNull() = null
 }
