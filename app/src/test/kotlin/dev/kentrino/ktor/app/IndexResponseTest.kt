@@ -3,6 +3,7 @@ package dev.kentrino.ktor.app
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import dev.kentrino.ktor.core.Id
+import dev.kentrino.ktor.core.MusicCategory
 import dev.kentrino.ktor.core.randomId
 import io.kotest.core.spec.style.AnnotationSpec
 import io.kotest.matchers.shouldBe
@@ -21,7 +22,7 @@ class IndexResponseTest : AnnotationSpec() {
     fun serializeAndDeserialize() {
         val expectedNumber = int.next()
         val expectedUserId: Id.UserId = randomId()
-        val response = IndexResponse(expectedNumber, userId = expectedUserId)
+        val response = IndexResponse(expectedNumber, userId = expectedUserId, musicCategory = MusicCategory.Rock)
         val str = objectMapper.writeValueAsString(response)
         val obj = objectMapper.readValue<IndexResponse>(str)
         obj.nullableUserId shouldBe null
