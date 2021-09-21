@@ -3,7 +3,8 @@
  */
 
 plugins {
-    id("dev.kentrino.ktor.kotlin-library-conventions")
+    kotlin("jvm")
+    `java-library`
 }
 
 dependencies {

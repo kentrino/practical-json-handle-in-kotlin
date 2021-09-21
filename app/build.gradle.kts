@@ -3,11 +3,12 @@
  */
 
 plugins {
-    id("dev.kentrino.ktor.kotlin-application-conventions")
+    kotlin("jvm")
+    application
 }
 
 dependencies {
-    implementation("org.apache.commons:commons-text")
+    implementation("org.apache.commons:commons-text:1.9")
     implementation(project(":utilities"))
 }
 
