@@ -3,11 +3,11 @@
  */
 package dev.kentrino.ktor.list
 
-import org.junit.jupiter.api.Test
+import io.kotest.core.spec.style.AnnotationSpec
 
 import org.junit.jupiter.api.Assertions.*
 
-class LinkedListTest {
+class LinkedListTest : AnnotationSpec() {
     @Test fun testConstructor() {
         val list = LinkedList()
         assertEquals(0, list.size())

@@ -3,12 +3,11 @@
  */
 package dev.kentrino.ktor.app
 
-import org.junit.jupiter.api.Test
+import io.kotest.core.spec.style.FunSpec
+import kotlin.test.assertEquals
 
-import org.junit.jupiter.api.Assertions.assertEquals
-
-class MessageUtilsTest {
-    @Test fun testGetMessage() {
+class MessageUtilsTest: FunSpec({
+    test("testGetMessage") {
         assertEquals("Hello      World!", MessageUtils.getMessage())
     }
-}
+})

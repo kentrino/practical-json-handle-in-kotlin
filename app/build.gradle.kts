@@ -15,6 +15,8 @@ dependencies {
     logging()
     implementation("org.apache.commons:commons-text:1.9")
     implementation(project(":utilities"))
+    testImplementation("com.github.kentrino:json-assert:68689320bc")
+    kotest()
 }
 
 application {

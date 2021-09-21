@@ -42,3 +42,10 @@ fun DependencyHandlerScope.logging() {
     "implementation"("org.slf4j:jul-to-slf4j:1.7.32")
     "runtimeOnly"("ch.qos.logback:logback-classic:1.2.6")
 }
+
+fun DependencyHandlerScope.kotest() {
+    "testImplementation"(kotlin("test"))
+    "testImplementation"("io.kotest:kotest-runner-junit5-jvm:$kotestVersion")
+    "testImplementation"("io.kotest:kotest-framework-api-jvm:$kotestVersion")
+    "testImplementation"("io.kotest:kotest-property-jvm:$kotestVersion")
+}
